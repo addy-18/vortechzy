@@ -1,20 +1,30 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Vortechzy
 
-# Run and deploy your AI Studio app
+A modern, high-performance web application built with Next.js, Tailwind CSS, and Framer Motion.
 
-This contains everything you need to run your app locally.
+## Getting Started
 
-View your app in AI Studio: https://ai.studio/apps/c684cd03-5925-449f-9748-abaf3889ce34
+Follow these simple steps to run the project locally.
 
-## Run Locally
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
-**Prerequisites:**  Node.js
+### Installation
+Install the required dependencies:
+```bash
+npm install
+```
 
+### Running the Development Server
+Start the local development server:
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Building for Production
+To create an optimized production build:
+```bash
+npm run build
+npm start
+```
