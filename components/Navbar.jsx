@@ -25,10 +25,10 @@ const NAV_LINKS = [
   { label: "Portfolio",        href: "#", hasPlus: true  },
   { label: "Services",         href: "#", hasPlus: true  },
   { label: "Technologies",     href: "#", hasPlus: true  },
-  { label: "About",            href: "#", hasPlus: false },
+  { label: "About",            href: "/about", hasPlus: false },
   { label: "Awards & Reviews", href: "#", hasPlus: false },
   { label: "Blog",             href: "#", hasPlus: false },
-  { label: "Contact Us",       href: "#", hasPlus: false },
+  { label: "Contact Us",       href: "/contact", hasPlus: false },
 ];
 
 function NavLink({ label, href, hasPlus, compact }) {
