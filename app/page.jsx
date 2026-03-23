@@ -6,6 +6,8 @@ import Preloader from "@/components/Preloader";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,6 +28,8 @@ export default function Home() {
       >
         <Hero isReady={!isLoading} />
         <Features />
+        <About/>
+        <Contact/>
       </motion.div>
     </main>
   );
