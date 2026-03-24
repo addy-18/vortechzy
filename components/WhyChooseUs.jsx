@@ -60,20 +60,20 @@ export default function WhyChooseUs() {
   }, { scope: containerRef });
 
   const features = [
-    { 
-      title: "Built for Uncapped Scale", 
+    {
+      title: "Built for Uncapped Scale",
       desc: "Distributed architectures designed to grow with your business. Fast, stable, and secure—from ten users to ten million.",
       icon: <Network className="w-7 h-7 text-[var(--glow)]" />,
       bg: "linear-gradient(145deg, rgba(20,28,45,0.96) 0%, rgba(10,14,20,0.98) 100%)"
     },
-    { 
-      title: "End-to-End Velocity", 
+    {
+      title: "End-to-End Velocity",
       desc: "We handle the complete product lifecycle. From backend infrastructure to cloud deployment, expect frictionless execution and faster launches.",
       icon: <InfinityIcon className="w-7 h-7 text-[var(--glow)]" />,
       bg: "linear-gradient(145deg, rgba(32,20,40,0.96) 0%, rgba(13,10,20,0.98) 100%)"
     },
-    { 
-      title: "Future-Proof Engineering", 
+    {
+      title: "Future-Proof Engineering",
       desc: "No shortcuts, zero technical debt. We deliver clean, optimized software that is easy to maintain and built to last.",
       icon: <Shield className="w-7 h-7 text-[var(--glow)]" />,
       bg: "linear-gradient(145deg, rgba(20,35,28,0.96) 0%, rgba(10,15,12,0.98) 100%)"
@@ -81,8 +81,8 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section 
-      ref={containerRef} 
+    <section
+      ref={containerRef}
       className="relative flex flex-col items-center justify-center w-full h-screen bg-[var(--bg)] overflow-hidden"
     >
       <div className="absolute top-12 left-6 md:top-20 md:left-20 z-10 flex flex-col items-start pointer-events-none">
@@ -101,7 +101,7 @@ export default function WhyChooseUs() {
       <div className="absolute top-0 right-0 w-[40vw] h-[40vh] bg-[var(--glow)]/10 blur-[100px] rounded-full pointer-events-none transform translate-x-1/3 -translate-y-1/3" />
 
       {/* Cards Stage */}
-      <div 
+      <div
         className="relative self-end flex w-[85vw] md:w-[70vw] lg:w-[55vw] h-[50vh] md:h-[60vh] mt-16 mr-4 md:mr-16 lg:mr-24"
         style={{ perspective: "1500px" }}
       >
@@ -116,7 +116,7 @@ export default function WhyChooseUs() {
             <div
               className="card-front absolute inset-0 w-full h-full shadow-xl overflow-hidden box-border"
               style={{
-                backgroundImage: "url('/why.jpg')",
+                backgroundImage: "url('/Why.png')",
                 backgroundSize: "300% 100%",
                 backgroundPosition: `${i * 50}% 50%`,
                 WebkitBackfaceVisibility: "hidden",

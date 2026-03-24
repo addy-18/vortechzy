@@ -5,28 +5,28 @@ import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-
 import { Cinzel, Inter } from "next/font/google";
 
 const cinzel = Cinzel({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
-const inter  = Inter({ subsets: ["latin"], weight: ["300", "400", "500", "600"] });
+const inter = Inter({ subsets: ["latin"], weight: ["300", "400", "500", "600"] });
 
 /* ─── vortechzy light palette (using globals) ─────────────────── */
 const T = {
-  bg:        "var(--light-surface)",
-  text:      "var(--text-dark)",
+  bg: "var(--light-surface)",
+  text: "var(--text-dark)",
   textMuted: "rgba(14, 17, 20, 0.6)",
-  steel:     "var(--pro)",
-  cta1:      "var(--text-dark)",
-  cta2:      "var(--bg)",
-  glow:      "var(--glow)",
-  border:    "rgba(14, 17, 20, 0.08)",
+  steel: "var(--pro)",
+  cta1: "var(--text-dark)",
+  cta2: "var(--bg)",
+  glow: "var(--glow)",
+  border: "rgba(14, 17, 20, 0.08)",
   borderHov: "rgba(14, 17, 20, 0.15)",
-  card:      "rgba(14, 17, 20, 0.03)",
+  card: "rgba(14, 17, 20, 0.03)",
 };
 
 const NAV_LINKS = [
-  { label: "Technologies",     href: "#", hasPlus: true  },
-  { label: "Services",         href: "#", hasPlus: true  },
-  { label: "Our Work",         href: "#", hasPlus: false },
-  { label: "About",            href: "#", hasPlus: false },
-  { label: "Contact Us",       href: "#", hasPlus: false },
+  { label: "Technologies", href: "#", hasPlus: true },
+  { label: "Services", href: "#", hasPlus: true },
+  { label: "Our Work", href: "#", hasPlus: false },
+  { label: "About", href: "/about", hasPlus: false },
+  { label: "Contact Us", href: "/contact_us", hasPlus: false },
 ];
 
 function NavLink({ label, href, hasPlus, compact }) {
@@ -157,8 +157,8 @@ function MobileMenu({ open, onClose }) {
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [ctaHov,   setCtaHov]   = useState(false);
-  const [backHov,  setBackHov]  = useState(false);
+  const [ctaHov, setCtaHov] = useState(false);
+  const [backHov, setBackHov] = useState(false);
 
   useEffect(() => {
     const onResize = () => { if (window.innerWidth >= 900) setMenuOpen(false); };
@@ -173,9 +173,9 @@ export default function Navbar() {
           position: "fixed",
           zIndex: 100,
           /* Fixed pill offsets */
-          top:    "14px",
-          left:   "24px",
-          right:  "24px",
+          top: "14px",
+          left: "24px",
+          right: "24px",
           height: "64px",
 
           display: "flex",
@@ -188,7 +188,7 @@ export default function Navbar() {
           /* Clear background so text is visible on dark root body */
           background: "rgba(251, 252, 253, 0.85)",
 
-          backdropFilter:       "blur(20px) saturate(180%)",
+          backdropFilter: "blur(20px) saturate(180%)",
           WebkitBackdropFilter: "blur(20px) saturate(180%)",
 
           border: "1px solid rgba(0,0,0,0.08)",
@@ -216,7 +216,7 @@ export default function Navbar() {
             src="/logo.png"
             alt="vortechzy logo"
             style={{
-              width:  "48px",
+              width: "48px",
               height: "48px",
               objectFit: "contain",
               flexShrink: 0,
@@ -278,7 +278,7 @@ export default function Navbar() {
             onMouseLeave={() => setBackHov(false)}
             aria-label="Back"
             style={{
-              width:  "42px",
+              width: "42px",
               height: "42px",
               borderRadius: "50%",
               border: `1px solid ${backHov ? T.borderHov : T.border}`,
@@ -290,7 +290,7 @@ export default function Navbar() {
             }}
           >
             <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
-              <path d="M9 2L4 7L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M9 2L4 7L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
         </div>
