@@ -11,15 +11,12 @@ if (typeof window !== "undefined") {
 export default function SmoothScroll({ children }) {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
-      direction: 'vertical',
-      gestureDirection: 'vertical',
-      smooth: true,
-      mouseMultiplier: 1,
-      smoothTouch: false,
+      lerp: 0.06, // Lower value = smoother, more "floaty" and heavy feel
+      wheelMultiplier: 1.2,
+      smoothWheel: true,
+      normalizeWheel: true, // Standardizes scroll speeds across different trackpads/mice
+      syncTouch: true,
       touchMultiplier: 2,
-      infinite: false,
     });
 
     // Synchronize Lenis with GSAP ScrollTrigger
